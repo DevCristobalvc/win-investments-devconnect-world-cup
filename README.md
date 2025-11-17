@@ -1,53 +1,197 @@
-# Getting Started with Create React App
+# WIN Investments - DevConnect World Cup 🏆
+
+## Identidad ZK y Plataforma de Participación
+
+**Autor:** Cristóbal Factory  
+**Evento:** DevConnect Argentina 2025  
+**Fecha:** 17-20 Noviembre 2025
+
+---
+
+## 📋 Descripción del Proyecto
+
+Esta aplicación representa la evolución de WIN Investments hacia la Web3, integrando **Zero-Knowledge Proofs (ZKP)** para verificación de identidad y participación comunitaria. El proyecto nace como respuesta a la necesidad de democratizar el acceso al fútbol a través de tecnología blockchain, garantizando privacidad, seguridad y transparencia.
+
+### 🎯 Características Principales
+
+- **Verificación de Identidad ZK**: Integración con ZKPassport para verificación sin compartir datos personales
+- **DevConnect World Cup**: Torneo comunitario con apuestas en USDC, BTC y ETH
+- **Prize Pool**: 1 ETH para el equipo ganador (final el 20 de noviembre)
+- **Credenciales Reutilizables**: Sistema de identidad descentralizada para futuros productos
+- **UI/UX Premium**: Diseño inspirado en WIN Investments con colores corporativos
+
+---
+
+## 🔐 Zero-Knowledge Identity
+
+### ¿Qué es ZKPassport?
+
+ZKPassport es una solución de verificación de identidad que permite generar pruebas criptográficas usando únicamente el chip NFC del pasaporte. **No se almacenan datos sensibles**.
+
+### Proceso de Verificación
+
+1. **Escaneo Local**: El usuario escanea su pasaporte con NFC
+2. **Generación de Prueba**: Se crea una prueba ZK-SNARK en el dispositivo
+3. **Validación**: WIN recibe solo la prueba criptográfica (no datos personales)
+4. **Credencial**: El usuario obtiene un badge verificado reutilizable
+
+### Beneficios ZK
+
+- ✅ **Privacidad Total**: No compartimos datos personales
+- ✅ **Verificación Instantánea**: Proceso rápido
+- ✅ **Seguridad Criptográfica**: Pruebas verificables
+- ✅ **Compliance Reducido**: Menor riesgo regulatorio
+- ✅ **Credencial Portable**: Reutilizable en WIN
+
+---
+
+## ⚽ DevConnect World Cup
+
+### Dinámica del Torneo
+
+- **6 Equipos**: Crypto Champions 🇦🇷, Blockchain Bulls 🇧🇷, DeFi Dynamos 🇺🇾, Web3 Warriors 🇨🇱, NFT Knights 🇨🇴, Smart Contract FC 🇵🇪
+- **Apuestas**: USDC, BTC o ETH
+- **Premio**: 1 ETH acumulado
+- **Final**: 20 de noviembre 2025
+- **Requisito**: Verificación ZK obligatoria
+
+---
+
+## 🛠️ Stack Técnico
+
+- **React 18** (Create React App)
+- **Context API** (Estado global)
+- **ZKPassport** (ZK-SNARKs)
+- **Polygon** (Blockchain de WIN)
+- **$WINS Token** (Utility token)
+
+### Colores Corporativos
+- Verde Principal: `#00D084`
+- Verde Secundario: `#00ffa3`
+- Fondo Oscuro: `#0a0a0a`
+
+---
+
+## 🚀 Instalación y Ejecución
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
-
-In the project directory, you can run:
 
 ### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Builds the app for production to the `build` folder.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📁 Estructura del Proyecto
 
-### `npm run eject`
+```
+src/
+├── components/
+│   ├── Header.js              # Navegación principal con botón DevConnect
+│   ├── Banner.js              # Banner principal con countdown $WINS
+│   ├── PlayersSection.js      # Tabla de jugadores más populares
+│   ├── DevConnectModal.js     # Modal del torneo
+│   └── ZKVerification.js      # Flujo completo de verificación ZK
+├── context/
+│   └── VerificationContext.js # Estado global de verificación
+└── App.js                      # Componente principal
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🔄 Flujo de Usuario
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Usuario hace clic en "Devconnect World Cup" en el header
+2. Se abre el modal con información del torneo
+3. Usuario selecciona su equipo y cantidad de apuesta
+4. Hace clic en "Comenzar Verificación ZK"
+5. **Paso 1**: Simula escaneo de pasaporte (3 segundos)
+6. **Paso 2**: Genera prueba criptográfica (2.5 segundos)
+7. **Paso 3**: Muestra credencial verificada con badge
+8. El header muestra checkmark verde de verificado ✓
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🎯 Objetivos Estratégicos
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Para WIN Investments
+- Reducción de riesgos de datos sensibles
+- Liderazgo en Web3 e identidad descentralizada
+- Community engagement en DevConnect
+- Producto diferenciado único
+- Base para futuros productos (governance, rewards)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Para Usuarios
+- Privacidad garantizada (datos nunca salen del dispositivo)
+- Experiencia gamificada con premios reales
+- Credencial portable y reutilizable
+- Verificación transparente on-chain
+- Solo personas reales (anti-bots)
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🌐 Casos de Uso Futuros
+
+- **Votaciones de Governance**: Solo usuarios verificados
+- **Acceso Premium**: Funciones exclusivas
+- **Reputación On-Chain**: Sistema de credenciales
+- **Airdrops Seguros**: Sin Sybil attacks
+- **KYC Instantáneo**: Verificación en segundos
+
+---
+
+## 🛡️ Seguridad y Privacidad
+
+### Datos NO Compartidos
+❌ Nombre | ❌ Número de pasaporte | ❌ Foto | ❌ Fecha de nacimiento | ❌ Nacionalidad
+
+### Datos Verificables (Sin revelar detalles)
+✅ Pasaporte válido | ✅ Mayor de edad | ✅ Persona única | ✅ Hash criptográfico
+
+---
+
+## 🚧 Roadmap
+
+**Q4 2025** (Actual)
+- ✅ MVP de verificación ZK con ZKPassport
+- ✅ DevConnect World Cup Tournament
+- ✅ Badge de verificación
+
+**Q1 2026**
+- 🔜 ZK verification en signup flow
+- 🔜 Sistema de reputación on-chain
+- 🔜 Votaciones de governance
+
+**Q2 2026**
+- 🔜 Credenciales NFT de logros
+- 🔜 Social graph de inversores
+
+---
+
+## 📞 Contacto
+
+**WIN Investments**
+- Website: https://www.win.investments
+- Twitter: @win_investments
+- Telegram: t.me/win_investments_mc
+
+---
+
+## 🎉 Agradecimientos
+
+Gracias a DevConnect Argentina y al equipo de WIN Investments por confiar en esta visión donde privacidad, deporte y blockchain se encuentran.
+
+**#DevConnect2025 #ZKIdentity #WINInvestments #Web3Football**
+
+---
+
 
 ### Analyzing the Bundle Size
 
